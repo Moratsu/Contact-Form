@@ -56,3 +56,8 @@ button {
     border: none;
     border-radius: 3px;
 }
+
+.err {
+    color: darkred;
+    display: none;
+}

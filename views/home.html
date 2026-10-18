@@ -11,25 +11,30 @@
     <!--Stylesheet-->
     <link rel="stylesheet" href = "styles/contact-styles.css">
 
+    <!-- JavaScript -->
+    <script src="js/Contact-Form.js" defer></script>
 </head>
 <body>
-    <form>
+    <form id="Contact-Form" action="#" method="get">
         <h1>Contact Form</h1>
 
         <div class="information">
             <div class="tab">
-                <label for="first-name">First Name</label>
-                <input type="text" id ="first-name" name="first-name">
+                <label for="fname">First Name</label>
+                <input type="text" id ="fname" name="fname">
+                <span class="err" id="err-fname">First name is required</span>
             </div>
 
             <div class="tab">
-                <label for="last-name">Last Name</label>
-                <input type="text" id ="last-name" name="last-name">
+                <label for="lname">Last Name</label>
+                <input type="text" id ="lname" name="lname">
+                <span class="err" id="err-lname">Last name is required</span>
             </div>
 
             <div class="tab">
                 <label for="job-title">Job Title</label>
                 <input type="text" id ="job-title" name="job-title">
+                <span class="err" id="err-job">Job title is required</span>
             </div>
         </div>
 
@@ -39,16 +44,20 @@
             <div class="tab">
                 <label for="company">Company</label>
                 <input type="text" id ="company" name="company">
+                <span class="err" id="err-company">Company name is required</span>
             </div>
 
             <div class="tab">
                 <label for="linkedin">LinkedIn URL</label>
                 <input type="text" id ="linkedin" name="linkedin">
+                <span class="err" id="err-linkedin">LinkedIn URL is required</span>
             </div>
 
             <div class="tab">
                 <label for="email">Email Address</label>
-                <input type="text" id ="linkedin" name="linkedin">
+                <input type="text" id ="email" name="email">
+                <span class="err" id="err-email">Email is required</span>
+                <span class="err" id="err-symbol">@ symbol is required</span>
             </div>
         </div>
 
@@ -56,14 +65,20 @@
          <div class="information">
             <div class="tab">
                 <label for="meeting">How did we meet?</label>
+                <span class="err" id="err-meeting">Meeting method is required</span>
                 <select id="meeting" name="meeting">
-                    <option value="">Please select</option>
+                    <option value="Select">Please select</option>
+                    <option value="Irl">In-person</option>
+                    <option value="Social">Social Media</option>
+                    <option value="Mutual">Mutual Connections</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
 
             <div class="tab">
                 <label for="other">Other (please specify)</label>
                 <input type="text" id="other" name="other">
+                <span class="err" id="err-other">Required if Other is selected</span>
             </div>
         </div>
 
@@ -86,7 +101,7 @@
 
          <div class="option">
             <label>Choose an email format:</label>
-            
+            <span class="err" id="err-format">Select email format</span>
             <input type="radio" id="html" name="format">
             <label for="html"><strong>HTML</strong></label>
 
