@@ -6,7 +6,7 @@
     <title>Contact-Form</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="images/contact-icon.png">
+    <link rel="icon" href="images/contacts-icon.png">
     
     <!--Stylesheet-->
     <link rel="stylesheet" href = "styles/contact-styles.css">
@@ -15,65 +15,72 @@
 <body>
     <form>
         <h1>Contact Form</h1>
-        <div>
-            <label for="first-name">First Name</label>
-            <input type="text" id ="first-name" name="first-name">
-        </div>
-        <div>
-            <label for="last-name">Last Name</label>
-            <input type="text" id ="last-name" name="last-name">
-        </div>
-        <div>
-            <label for="job-title">Job Title</label>
-            <input type="text" id ="job-title" name="job-title">
-        </div>
 
-
-        <!-- new row -->
-        <div>
-            <label for="company">Company</label>
-            <input type="text" id ="company" name="company">
-        </div>
-        <div>
-            <label for="linkedin">LinkedIn URL</label>
-            <input type="text" id ="linkedin" name="linkedin">
-        </div>
-        <div>
-            <label for="email">Email Address</label>
-            <input type="text" id ="linkedin" name="linkedin">
+        <div class="information">
+            <div>
+                <label for="first-name">First Name</label>
+                <input type="text" id ="first-name" name="first-name">
+            </div>
+            <div>
+                <label for="last-name">Last Name</label>
+                <input type="text" id ="last-name" name="last-name">
+            </div>
+            <div>
+                <label for="job-title">Job Title</label>
+                <input type="text" id ="job-title" name="job-title">
+            </div>
         </div>
 
         <!-- new row -->
-         <div>
-            <label for="meeting">How did we meet?</label>
-            <select id="meeting" name="meeting">
-                <option value="">Please select</option>
-            </select>
-         </div>
 
-         <div>
-            <label for="other">Other (please specify)</label>
-            <input type="text" id="other" name="other">
-         </div>
+        <div class="information">
+            <div>
+                <label for="company">Company</label>
+                <input type="text" id ="company" name="company">
+            </div>
+            <div>
+                <label for="linkedin">LinkedIn URL</label>
+                <input type="text" id ="linkedin" name="linkedin">
+            </div>
+            <div>
+                <label for="email">Email Address</label>
+                <input type="text" id ="linkedin" name="linkedin">
+            </div>
+        </div>
+
+        <!-- new row -->
+         <div class="information">
+            <div>
+                <label for="meeting">How did we meet?</label>
+                <select id="meeting" name="meeting">
+                    <option value="">Please select</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="other">Other (please specify)</label>
+                <input type="text" id="other" name="other">
+            </div>
+        </div>
 
 
          <!-- new row -->
 
-         <div>
+         <div class="information">
             <label for="message">Message</label>
             <textarea id="message" name="message"></textarea>
          </div>
 
          <!-- new row -->
 
-         <div>
+         <div class="option">
             <input type="checkbox" id="mail" name="mail">
             <label for="mail"><strong>Please add me to your mailing list</strong></label>
          </div>
 
          <!-- new row -->
 
-         <div>
+         <div class="option">
             <label>Choose an email format:</label>
             <input type="radio" id="html" name="format">
             <label for="html"><strong>HTML</strong></label>

@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 12px;
+    background-color: rgb(233, 232, 232);
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px 20px 20px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.information {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.option {
+    margin-bottom: 10px;
+}
+
+select {
+    height: 22px;
+}
+
+textarea {
+    height: 60px;
+}
