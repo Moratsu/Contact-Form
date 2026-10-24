@@ -30,25 +30,24 @@ document.getElementById("Contact-Form").onsubmit = () => {
         document.getElementById("err-company").style.display = "block";
         isValid = false;
     }
-    //Validates the users LinkeIn
+    //Validates the users LinkedIn
     let linkedin = document.getElementById("linkedin").value.trim();
-    if(linkedin === "") {
+    if(linkedin !== "" && !linkedin.includes("https://linkedin.com/in/")) {
         document.getElementById("err-linkedin").style.display = "block";
         isValid = false;
     }
     //Validates the users email address
     let email = document.getElementById("email").value.trim();
-    if(email === "") {
-        document.getElementById("err-email").style.display = "block";
-        isValid = false;
-    }
-    if(!email.includes("@")){ //Checks for @
+    if(!email.includes("@") && email !== ""){ //Checks for @ and if it's empty
         document.getElementById("err-symbol").style.display = "block";
         isValid = false;
     }
+    if(!email.includes(".") && email !== ""){ //Checks for . and if it's empty
+        document.getElementById("err-dot").style.display = "block";
+        isValid = false;
+    }
 
-    
-    //Validates the users flavor selection
+    //Validates how the user met you
     let meeting = document.getElementById("meeting").value;
     let other = document.getElementById("other").value.trim();
     if(meeting == "Select") {
@@ -59,8 +58,13 @@ document.getElementById("Contact-Form").onsubmit = () => {
         document.getElementById("err-other").style.display = "block";
     }
     
-    
-    //Validates the users cone selection
+    //Valides if the user wants you on their mailing list
+    let allow = document.getElementById("mail");
+    if(allow.checked && email === ""){
+        document.getElementById("err-mail").style.display = "block";
+        isValid = false;
+    }
+    //Validates the users choice of email format
     let methodSelected = false;
     let methodButtons = document.getElementsByName("format");
     for (let i=0; i<methodButtons.length; i++) {
