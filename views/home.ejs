@@ -15,7 +15,7 @@
     <script src="js/Contact-Form.js" defer></script>
 </head>
 <body>
-    <form id="Contact-Form" action="#" method="get">
+    <form id="Contact-Form" action="/confirm" method="post">
         <h1>Contact Form</h1>
 
         <div class="information">
@@ -32,8 +32,8 @@
             </div>
 
             <div class="tab">
-                <label for="job-title">Job Title</label>
-                <input type="text" id ="job-title" name="job-title">
+                <label for="jobtitle">Job Title</label>
+                <input type="text" id ="jobtitle" name="jobtitle">
                 <span class="err" id="err-job">Job title is required</span>
             </div>
         </div>
@@ -112,7 +112,10 @@
 
          <!-- new row -->
 
-         <button type="submit">Submit</button>
+         <button type="submit" id="confirm">Submit</button>
     </form>
+    <footer>
+        <p>Github Repository: <a href="https://github.com/Moratsu/Vacation">Click Here</a></p>
+    </footer>
 </body>
 </html>

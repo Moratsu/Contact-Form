@@ -18,7 +18,7 @@ document.getElementById("Contact-Form").onsubmit = () => {
     }
 
     //Validates the user job title
-    let job = document.getElementById("job-title").value.trim();
+    let job = document.getElementById("jobtitle").value.trim();
     if(job === "") {
         document.getElementById("err-job").style.display = "block";
         isValid = false;
