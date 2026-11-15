@@ -3,119 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact-Form</title>
+    <title>Document</title>
+
+    <link rel="stylesheet" href = "styles/styles.css">
 
     <!-- Favicon -->
-    <link rel="icon" href="images/contacts-icon.png">
-    
-    <!--Stylesheet-->
-    <link rel="stylesheet" href = "styles/contact-styles.css">
-
-    <!-- JavaScript -->
-    <script src="js/Contact-Form.js" defer></script>
+    <link rel="icon" href="images/favicon.jpg">
 </head>
 <body>
-    <form id="Contact-Form" action="/confirm" method="post">
-        <h1>Contact Form</h1>
-
-        <div class="information">
-            <div class="tab">
-                <label for="fname">First Name</label>
-                <input type="text" id ="fname" name="fname">
-                <span class="err" id="err-fname">First name is required</span>
-            </div>
-
-            <div class="tab">
-                <label for="lname">Last Name</label>
-                <input type="text" id ="lname" name="lname">
-                <span class="err" id="err-lname">Last name is required</span>
-            </div>
-
-            <div class="tab">
-                <label for="jobtitle">Job Title</label>
-                <input type="text" id ="jobtitle" name="jobtitle">
-                <span class="err" id="err-job">Job title is required</span>
-            </div>
+    <%- include('partials/header') %>
+    <header>
+        <div>
+            <h1>Joey Le</h1>
+            JoeyLe305@gmail.com | (206)-235-5479
+            <!--  | <a href="https://www.linkedin.com/in/joey-le1/?isSelfProfile=true">Linkedin</a> -->
         </div>
+        <img src="images/Joey.jpg" alt="Photo of Joey Le">
+    </header>
 
-        <!-- new row -->
+    <div class = "sidetab">
 
-        <div class="information">
-            <div class="tab">
-                <label for="company">Company</label>
-                <input type="text" id ="company" name="company">
-                <span class="err" id="err-company">Company name is required</span>
-            </div>
+    <aside>
+        <h2>Education</h2>
+        <hr>
+            <Strong>Green River College ~ Auburn, WA</Strong> <br>
+            <ul>
+                <li>Software Development Bachelor, expected June 23rd 2028</li>
+                <li>Associates in Computer Science, graduated 23rd 2026</li>
+            </ul>
+    </aside>
 
-            <div class="tab">
-                <label for="linkedin">LinkedIn URL</label>
-                <input type="text" id ="linkedin" name="linkedin">
-                <span class="err" id="err-linkedin">Correct HTTP URL is required</span>
-            </div>
+    <main>
+    <h2>About Me</h2>
+    <hr>
+    <p>
+        Striving student with strong communication skills and adaptability, seeking to broaden my skillset
+        through a summer internship in Software Development. I thrive in team environments, learn quickly, and actually care
+        about doing a good job.
+    </p>
+    
+    <h2>Experience</h2>
+    <hr>
+        <Strong>Coding experience</Strong> <br>
+        <ul>
+            <li>Lua, Java, Python.</li>
+            <li>Currently learning HTML, CSS, SQL, JavaScript</li>
+            <li>Group coding projects including,
+                <ul>
+                    <li>Small dungeon crawler game in Java.</li>
+                    <li>Digital chess, and tic-tac-toe project in Java.</li>
+                </ul>
+            </li>
+        </ul>
 
-            <div class="tab">
-                <label for="email">Email Address</label>
-                <input type="text" id ="email" name="email">
-                <span class="err" id="err-symbol">@ symbol is required</span>
-                <span class="err" id="err-dot">. symbol is required</span>
-            </div>
-        </div>
+        <Strong>Personal Project</Strong> <br>
+        <ul>
+            <li>Currently Coding a "Super Smash bros" inspired game on the Roblox platform in the LUA language.</li>
+            <li>Animated, 3D modeled, and sound designed using Blender.</li>
+        </ul>
 
-        <!-- new row -->
-         <div class="information">
-            <div class="tab">
-                <label for="meeting">How did we meet?</label>
-                <span class="err" id="err-meeting">Meeting method is required</span>
-                <select id="meeting" name="meeting">
-                    <option value="Select">Please select</option>
-                    <option value="Irl">In-person</option>
-                    <option value="Social">Social Media</option>
-                    <option value="Mutual">Mutual Connections</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
+    <h2>Skills & Certificates</h2>
+    <hr>
+        <ul>
+            <li>HTML for Programmers, LinkedIn Learning, September 2026</li>
+            <li>HTML Essential Training 2020, LinkedIn Learning, September 2026</li>
+        </ul>
+    </main>
 
-            <div class="tab">
-                <label for="other">Other (please specify)</label>
-                <input type="text" id="other" name="other">
-                <span class="err" id="err-other">Required if Other is selected</span>
-            </div>
-        </div>
-
-
-         <!-- new row -->
-
-         <div>
-            <label for="message">Message</label>
-            <textarea id="message" name="message"></textarea>
-         </div>
-
-         <!-- new row -->
-
-         <div class="option">
-            <input type="checkbox" id="mail" name="mail">
-            <label for="mail"><strong>Please add me to your mailing list</strong></label>
-            <span class="err" id="err-mail">Email is required when adding to mailing list.</span>
-         </div>
-
-         <!-- new row -->
-
-         <div class="option">
-            <label>Choose an email format:</label>
-            <span class="err" id="err-format">Select email format</span>
-            <input type="radio" id="html" name="format">
-            <label for="html"><strong>HTML</strong></label>
-
-            <input type="radio" id="text" name="format">
-            <label for="text"><strong>Text</strong></label>
-         </div>
-
-         <!-- new row -->
-
-         <button type="submit" id="confirm">Submit</button>
-    </form>
-    <footer>
-        <p>Github Repository: <a href="https://github.com/Moratsu/Contact-Form">Click Here</a></p>
-    </footer>
+    </div>
+    <%- include('partials/footer') %>
 </body>
 </html>

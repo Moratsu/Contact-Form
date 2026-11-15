@@ -6,11 +6,26 @@
     <title>Confirmation</title>
 </head>
 <body>
+    <%- include('partials/header') %>
     <h1>Confirmed</h1>
-    <div">
+
+    <h2> Form Details</h2>
+    <p> Name: <%= form.fname %> <%= form.lname %> </p>
+    <p> Job Title: <%= form.jobtitle %></p>
+    <p> Company: <%= form.company %></p>
+    <p> LinkedIn URL:<%= form.linkedin %></p>
+    <p> Email:<%= form.email %></p>
+    <p> Meeting:<%= form.meeting %></p>
+    <p> Other:<%= form.other %></p>
+    <p> Message:<%= form.message %></p>
+    <p> Mailing:<%= form.mail %></p>
+    <p> Email Format:<%= form.format %></p>
+    <p> Times:<%= form.timestamp %></p>
+
+    <div>
         <a href="/">Back to Contact Form</a>
         <br>
-        <a href="/admin">Admin page</a>
+        <%- include('partials/footer') %>
     </div>
 </body>
 </html>

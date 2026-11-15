@@ -20,11 +20,16 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
+app.get('/form', (req, res) => {
+    res.render('form');
+});
+
 app.post('/confirm', (req,res) => {
     const form = req.body;
     form.timestamp = new Date()
 
     console.log(form);
+
 
     submissions.push(form);
     console.log(submissions);

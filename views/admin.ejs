@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/3.1.4/css/dataTables.dataTables.min.css">
 </head>
 <body>
+    <%- include('partials/header') %>
     <h1>Orders</h1>
     <table id="contact-table" class="display">
         <thead>
@@ -46,7 +47,12 @@
         </tbody>  
     </table>
     <script>
-        new DataTable('#contact-table');
+        new DataTable('#contact-table', {
+                    language: {
+                        emptyTable: 'No forms submitted at this time'
+                    }
+                });
     </script> 
+    <%- include('partials/footer') %>
 </body>
 </html>
